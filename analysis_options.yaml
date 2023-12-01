@@ -1,0 +1,29 @@
+# include: package:very_good_analysis/analysis_options.5.1.0.yaml
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.gr.dart"
+    - "**/*.freezed.dart"
+    - "**/*.gen.dart"
+    - "**/*.chopper.dart"
+  errors:
+    invalid_annotation_target: ignore
+  plugins:
+    - custom_lint
+
+custom_lint:
+  rules:
+    # Project uses [UncontrolledProviderScope] so we can disable this rule
+    - missing_provider_scope: false
+    # Disable this as we're still using old Provider for the GoRouter instance
+    - avoid_manual_providers_as_generated_provider_dependency: false
+
+linter:
+  rules:
+    public_member_api_docs: false
+    # directives_ordering: true
+    prefer_single_quotes: true
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options

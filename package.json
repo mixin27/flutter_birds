@@ -1,0 +1,32 @@
+{
+  "name": "flutter_birds",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "format": "dart format lib . && dart run import_sorter:main",
+    "gen": "dart run build_runner build -d",
+    "gen:watch": "dart run build_runner watch -d",
+    "clean": "flutter clean && flutter pub get",
+    "commit": "npm run format && git add . && cz-customizable"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commitlint": "^18.4.3",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "cz-customizable": "^7.0.0",
+    "husky": "^8.0.3"
+  },
+  "commit": "./node_modules/cz-customizable/standalone.js",
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  }
+}
