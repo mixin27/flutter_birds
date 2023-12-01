@@ -27,6 +27,8 @@ dependencies:
   # json serializable
   json_annotation: ^4.8.1
 
+  equatable: ^2.0.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -43,7 +45,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
+    - assets/img/
     - assets/Birds.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
