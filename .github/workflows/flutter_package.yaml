@@ -106,8 +106,5 @@ jobs:
       - name: 🏗️ Generate build_runner
         run: dart run build_runner build
 
-      - name: 🌐 Generate Locale Keys
-        run: dart run easy_localization:generate -S assets/translations -O lib/l10n -o locale_keys.g.dart -f keys
-
       - name: 🕵️ Analyze
         run: flutter analyze ${{inputs.analyze_directories}}
